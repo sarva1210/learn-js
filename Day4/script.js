@@ -5,7 +5,7 @@
 //2 assignment operator
 //  = += -= *= /= %=
 // = value dene mai use
-let a = 12;
+// let a = 12;
 // += value ko perticular se bhadana
 // a+=13;
 
