@@ -47,4 +47,34 @@ if (pass === null) {
     }else{ console.log("Not matched");}
 }
 
+// While -> works till the condn is true 
+// start
+// while(end){
+// ...your code
+// change
+// }
+let i = 1;
+while (i<11) {
+    console.log("hi");
+    i++;
+}
+
+
 // 3 attemps to enter password if right early ->stop , if not "account locked"
+let attempts = 0;
+let opened = false;
+let pwd = "hey1234";
+let passward = prompt("give passward");
+attempts++;
+if (passward === pwd) opened =true;
+while (passward!== pwd) {
+    if (attempts===3) {
+        console.error("account locked");
+        break;
+    }
+    pwd = prompt("give passward");
+    if (passward === pwd) opened =true;
+    attempts++;
+}
+if(opened === true) console.log("account opened");
+
