@@ -1,0 +1,51 @@
+// continue the loop until user say stop and count the no of yes user said
+let word = prompt("tell words!");
+let counter = 0;
+while (word !== "stop") {
+    if (word==="yes") counter++;
+    word = prompt("tell words!");
+} 
+console.log(`total time yes count: ${counter}`);
+
+//  print no divisible by 7 from 1 to 50
+for (let i = 0; i < 51; i++) {
+    if (i%7 === 0) {
+        console.log(i);
+    }
+}
+
+// sum of all odd numbers from 1 to 30
+let sum = 0;
+for (let i = 0; i < 31; i++) {
+    if (i%2 !== 0) {
+        sum = sum + i;
+    }
+}
+console.log(sum);
+
+// Keep asking number until user enters an even number Stop only if input is even.
+let num = prompt("tell numbers");
+num = Number(num);
+while (num%2 !== 0) {
+    num = prompt("tell numbers");
+    num = Number(num);
+}
+
+// Print numbers between two user inputs Input start and end using prompt()
+let start = prompt("start");
+let end = prompt("end");
+if (start>end ) console.error("start cant be bigger than end");
+for (let i = start; i <= end; i++) {
+    console.log(i);
+}
+
+
+// Print only first 3 odd numbers from 1 to 20
+let count = 0;
+for (let i = 0; i < 21; i++) {
+    if(count === 3) break;
+    if (i%2 !== 0) {
+        console.log(i);
+        count++;
+    }
+}
