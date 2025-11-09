@@ -128,3 +128,22 @@ function addd(x){
   total = total + x;  // modifies external variable
   return total;
 }
+
+
+// scoping in js[global scope -> function ke bahar,function scope -> function ke ander]
+let ab = 12; //global
+function hi() {
+    let b = 14 ; //function 
+    console.log(b);
+} hi();
+console.log(ab);
+
+// understanding[closures,scoping rule]
+
+// clousers-> func that return func but returning fnc will use variable of the parent function , also a higher order function
+function abcd() {
+    let a = 12;
+    return function(){
+        console.log(a);
+    }
+}
