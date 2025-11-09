@@ -71,3 +71,60 @@ function gh(a,b,c,d) {
 }//spread
 let arr = [1,2,3,4];
 gh(...arr);
+
+// classic function //nested function
+function abcd() {
+    function defg() {
+        console.log("defg will work");
+    }
+    defg(); //nested function -> function inside function
+}
+abcd();
+
+// scope chain
+let a = 12; //globel scope
+function abcd() {
+    let b = 14; //scoping
+    function defg() {
+        console.log(b);
+    }
+    defg();
+}
+console.log(a);
+// abcd();
+
+// Immediately Invoked Function Expression [IIFE] -> to make private variable
+(function(){
+    let balance = 30000;
+})();
+
+// more functions in js [arrow function, fat arrow, anonymous, higher order, callback, first class, pure function, impure function]
+
+function hey(){ console.log("hey hey") } //normal function
+let fnc=()=>{ console.log("hey hey hey") } //fat arrow or arrow function
+hey();fnc();
+
+// anonymous -> no name function
+// higher order function -> one function that return another function or a function that accept one more function parameter
+
+function heys() {  //higher order function
+    return function(){}
+}
+
+
+// call back ->A callback is a function which is passed as an argument to another function and then that function calls it later.
+function heyss(a) {}
+heyss (function(){}) //call back fcn
+
+// first class ->function is treated like normal value ....stored/used in variable, pass, return
+
+// pure function->A pure function is a function that always gives the same output for the same input and it has no side effects.
+function add(x,y){
+  return x + y;
+}
+// impure function->A function that changes external data OR depends on external data
+let total = 0;
+function addd(x){
+  total = total + x;  // modifies external variable
+  return total;
+}
