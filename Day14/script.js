@@ -117,34 +117,34 @@ let user = {
     name: "sarva",
     age: 19,
     email: "srv@gmail",
-}
+};
 Object.freeze(user);
 console.log(user);
+
+
 
 let user2 = {
     name: "sarva",
     age: 19,
     email: "srv@gmail",
 };
-
 Object.seal(user2);
 
 user2.age = 20;          
 user2.city = "Indore";    
 delete user2.email;       
-
 console.log(user2);
 
 
 // Create a nested object (`user → address → city`) and access the city name inside it.
 
-let users = {
-    name: "sarva",
-    age: 19,
-    address: {
-        city: "bhopal",
-        pincode: 462002
+let Object = {
+    user:{
+        name: "sarva",
+        address:{
+            city:"bhopal",
+        }
     }
 };
 
-console.log(users.address.city);
+let{city} = Object.user.address;
